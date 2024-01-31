@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/images/fone3.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.game-field {
+  background-image: url("/images/fone2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  border: 3px solid tomato;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--sideField), 25px);
+  grid-template-rows: repeat(var(--sideField), 25px);
+  gap: 1px;
+}
+
+#score,
+#record {
+  color: gold;
+}
+
+.btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #555;
+  color: tomato;
+  font-size: 20px;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.btn--invisible {
+  display: none;
+}
+
+.title {
+  color: goldenrod;
+  margin-bottom: 20px;
+}
+
+.score,
+.record {
+  font-size: 20px;
+  color: tomato;
+  margin-bottom: 20px;
+}
+
+.record {
+  font-size: 20px;
+  color: tomato;
+  margin-top: 20px;
+}
+
+.cell {
+  background-color: transparent;
+}
+
+.food {
+  background-image: url("/images/pica.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.snake-unit {
+  background-image: url("/images/ball.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
